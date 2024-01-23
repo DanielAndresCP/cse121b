@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Activities</title>
+</head>
+
+<body>
+    <ul id="myList"></ul>
+    <script src="arrays.js"></script>
+</body>
+<script defer>
+    // Get the script element
+    var scriptElement = document.querySelector('script[src="arrays.js"]');
+
+    if (scriptElement) {
+        // Access the text content of the script element
+        var jsContent = scriptElement.textContent || scriptElement.innerText;
+        console.log(jsContent);
+    } else {
+        console.error('Script element not found.');
+    }
+</script>
+
+</html>
