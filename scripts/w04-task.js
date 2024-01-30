@@ -18,22 +18,37 @@ myProfile.placesLived.push({
 
 
 /* Populate Profile Object with placesLive objects */
+
+/* DOM Manipulation - Output */
+
+/* Name */
 document.querySelector("#name").innerText = myProfile.name
+
+/* Photo with attributes */
 document.querySelector("#photo").setAttribute("src", myProfile.photo)
 document.querySelector("#photo").setAttribute("alt", myProfile.name)
 
+
+
+/* Favorite Foods List*/
 myProfile.favoriteFoods.forEach((v) => {
     const liEl = document.createElement("li")
     liEl.textContent = v
     document.querySelector("#favorite-foods").appendChild(liEl)
 })
 
+
+
+/* Hobbies List */
 myProfile.hobbies.forEach((v) => {
     const liEl = document.createElement("li")
     liEl.textContent = v
     document.querySelector("#hobbies").appendChild(liEl)
 })
 
+
+
+/* Places Lived DataList */
 myProfile.placesLived.forEach((v) => {
     const dtEl = document.createElement("dt")
     dtEl.textContent = v.place
@@ -44,20 +59,3 @@ myProfile.placesLived.forEach((v) => {
     document.querySelector("#places-lived").appendChild(dtEl)
     document.querySelector("#places-lived").appendChild(ddEl)
 })
-
-/* DOM Manipulation - Output */
-
-/* Name */
-
-/* Photo with attributes */
-
-
-/* Favorite Foods List*/
-
-
-/* Hobbies List */
-
-
-/* Places Lived DataList */
-
-
