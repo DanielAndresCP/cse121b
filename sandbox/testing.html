@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Page</title>
+    <style>
+        .css-uppercase {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is a testing page</h1>
+
+    <h2>Test 01: element.innerText vs element.textContent</h2>
+    <p><b>Source Element:</b></p>
+    <p id="test01Info1" class="css-uppercase">this text is in lowercase in the html </p>
+    <p><b>Results:</b></p>
+    <p id="test01Out"></p>
+
+
+    <script defer>
+        function outputResults(html, id) {
+            const resultEl = document.getElementById(id)
+
+            resultEl.innerHTML = html
+        }
+
+
+        function test01() {
+            let html = ""
+
+            const p = document.querySelector("#test01Info1")
+
+            html += `<p>innerText: ${p.innerText}</p>`
+            html += `<p>textContent: ${p.textContent}</p>`
+            html += `<p>innerHTML: ${p.innerHTML}</p>`
+            html += `<hr>`
+
+
+            // html += `<p>Changing content with innerText... </p>`
+            // p.innerText = "this is some new content added with innerText"
+            // html += `<p>innerText: ${p.innerText}</p>`
+            // html += `<p>textContent: ${p.textContent}</p>`
+            // html += `<hr>`
+
+
+            // html += `<p>Changing content with textContent... </p>`
+            // p.innerText = "this is some new content added with textContent"
+            // html += `<p>innerText: ${p.innerText}</p>`
+            // html += `<p>textContent: ${p.textContent}</p>`
+            // html += `<hr>`
+
+
+            // html += `<p>Removing css-uppercase class... </p>`
+            // p.classList.remove("css-uppercase")
+            // html += `<p>innerText: ${p.innerText}</p>`
+            // html += `<p>textContent: ${p.textContent}</p>`
+
+            outputResults(html, "test01Out")
+        }
+
+
+
+
+
+        test01()
+    </script>
+</body>
+
+</html>
