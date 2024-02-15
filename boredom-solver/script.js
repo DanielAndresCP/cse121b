@@ -1,5 +1,5 @@
 // Global Constants
-const API_URL = "http://www.boredapi.com/api/activity/"
+const API_URL = "https://www.boredapi.com/api/activity/"
 
 
 // Getting all the elements needed globally
@@ -35,8 +35,6 @@ async function searchActivities() {
     const queryCreation = createQueryObject({ type, participants, accessibility, price })
 
     const fetchResult = await getActivities(queryCreation.data, RESULTS_PER_QUERY)
-
-    console.log(fetchResult.data);
 
     const dataValidation = validateData(fetchResult.data)
 
